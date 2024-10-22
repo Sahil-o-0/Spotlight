@@ -1,4 +1,4 @@
-from config.config import config
+from config import config
 
 async def count_status(fieldname: str):
     emp_col = config.db["Employee"]
