@@ -167,3 +167,11 @@ async def proj_status():
     ]
     projdetails = list(emp_col.aggregate(pipeline))
     return projdetails
+
+async def access_token():
+    response=req.post("https://poc-api.auth-zero.com/token-srv/token",data={
+    "grant_type":"client_credentials",
+    "client_id":"fccab487-8f89-4e0a-931b-cb7d6caf128d",
+    "client_secret":"9cd593bb-3956-4c75-8522-987a2bea4ef3",
+    "scope":"openid profile email"})
+    return(response.json()["access_token"])
