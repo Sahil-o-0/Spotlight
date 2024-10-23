@@ -14,3 +14,6 @@ async def handle_hrbp():
 @app.get("/proj_status")
 async def handle_proj_status():
     return await proj_status()
+@app.get("/access_token")
+async def handle_access_token():
+    return await access_token()
